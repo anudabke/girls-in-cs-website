@@ -1,0 +1,50 @@
+[
+  {
+    "image": "assets/posts/post-1.webp",
+    "caption": "Websites that make you better at programming",
+    "postUrl": "https://www.instagram.com/girls.in.cs/",
+    "isCarousel": false
+  },
+  {
+    "image": "assets/posts/post-2.webp",
+    "caption": "Books for people in tech",
+    "postUrl": "https://www.instagram.com/girls.in.cs/",
+    "isCarousel": false
+  },
+  {
+    "image": "assets/posts/post-3.webp",
+    "caption": "The best YouTube channels for AP classes",
+    "postUrl": "https://www.instagram.com/girls.in.cs/",
+    "isCarousel": false
+  },
+  {
+    "image": "assets/posts/post-4.webp",
+    "caption": "Movie recommendations for girls studying computer science",
+    "postUrl": "https://www.instagram.com/girls.in.cs/",
+    "isCarousel": false
+  },
+  {
+    "image": "assets/posts/post-5.webp",
+    "caption": "Podcasts for aspiring computer science majors",
+    "postUrl": "https://www.instagram.com/girls.in.cs/",
+    "isCarousel": false
+  },
+  {
+    "image": "assets/posts/post-6.webp",
+    "caption": "She’s a computer scientist",
+    "postUrl": "https://www.instagram.com/girls.in.cs/",
+    "isCarousel": false
+  },
+  {
+    "image": "assets/posts/post-7.webp",
+    "caption": "Topics to nerd out on in computer science",
+    "postUrl": "https://www.instagram.com/girls.in.cs/",
+    "isCarousel": false
+  },
+  {
+    "image": "assets/posts/post-8.webp",
+    "caption": "Where to find computer science project ideas",
+    "postUrl": "https://www.instagram.com/girls.in.cs/",
+    "isCarousel": false
+  }
+]

@@ -1,0 +1,49 @@
+name: Maintain opportunities and publish Pages
+on:
+  push:
+    branches: [main]
+    paths: ['docs/**', 'scripts/prune-opportunities.py', '.github/workflows/prune-opportunities.yml']
+  schedule:
+    - cron: '17 13 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: girls-in-cs-pages
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Refresh public data
+        env:
+          SCHEDULED: ${{ github.event_name == 'schedule' }}
+        run: |
+          if [ "$SCHEDULED" = true ]; then
+            python3 scripts/prune-opportunities.py --prune
+          else
+            python3 scripts/prune-opportunities.py
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+  publish:
+    needs: prepare
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    steps:
+      - id: pages
+        uses: actions/deploy-pages@v4

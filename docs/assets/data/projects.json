@@ -1,0 +1,217 @@
+[
+  {
+    "name": "DevDucky: Time Tracker & Focus Companion",
+    "creator": "clarissa-dev-codes",
+    "description": "DevDucky tracks active coding time in VS Code and displays it in the status bar. Its companion mascot reacts while you work, and the sidebar shows session stats.",
+    "category": "VS Code Extension",
+    "stack": "HTML/CSS/Javascript",
+    "links": [
+      {
+        "label": "Visit project",
+        "url": "https://marketplace.visualstudio.com/items?itemName=clarissa-dev-codes.ducky-time-tracker-and-focus-companion"
+      },
+      {
+        "label": "View code",
+        "url": "https://github.com/clarissa-dev-codes/Time-Tracker-Status-Bar-Extension"
+      }
+    ],
+    "image": "assets/projects/devducky-mascot.webp",
+    "cover": "assets/projects/devducky-time-tracker-focus-companion.webp",
+    "image_alt": "DevDucky mascot from the extension repository",
+    "audience": "VS Code users who want to track active coding time and stay focused."
+  },
+  {
+    "name": "Skin Disease diagnosis using CvT-RAG",
+    "creator": "Janhavi Belnekar",
+    "description": "An AI powered skin disease diagnosis assistant that combines computer vision, image retrieval and Retrieval-Augmented Generation (RAG) to analyze skin lesions images and provide an interpretable clinical style report.",
+    "category": "Artificial Intelligence/Machine Learning",
+    "stack": "Python, JavaScript",
+    "links": [
+      {
+        "label": "View code",
+        "url": "https://github.com/Janhavi30052002/skin-disease-rag.git"
+      }
+    ],
+    "image": null,
+    "cover": "assets/projects/skin-disease-diagnosis-using-cvt-rag.webp"
+  },
+  {
+    "name": "EcoCompiler",
+    "creator": "Shaymaa Mourchid",
+    "description": "A developer tool that cleans up HTML code, motivated by optimizing web performance and reducing carbon emissions.",
+    "category": "App Development",
+    "stack": "Python is the main language. Tkinter was used for the interface and Pillow for images. I wrote it in VS Code. For sample websites (to test the app), I used HTML and some CSS.",
+    "links": [
+      {
+        "label": "Visit project",
+        "url": "https://youtu.be/KTTULL0768c?si=QEIvIcfoix-sYKkL"
+      },
+      {
+        "label": "View code",
+        "url": "https://github.com/shaymaa0420/eco-compiler"
+      }
+    ],
+    "image": null,
+    "cover": "assets/projects/ecocompiler.webp"
+  },
+  {
+    "name": "Obstacle avoiding car",
+    "creator": "Aysha",
+    "description": "An obstacle avoiding car which can detect obstacles through sensor and avoid them.",
+    "category": "Robotics/Hardware",
+    "stack": "The project uses C/C++ programming in the Arduino IDE to control the robot. The main hardware and technologies include the Arduino microcontroller, HC-SR04 ultrasonic sensor, servo motor, four DC geared motors, Adafruit Motor Shield (AFMotor library), NewPing library for ultrasonic distance measurement, and the Servo library for controlling the servo motor. A rechargeable 18650 battery pack supplies power to the system.",
+    "links": [],
+    "image": null,
+    "cover": "assets/projects/obstacle-avoiding-car.webp"
+  },
+  {
+    "name": "Hydromind-X",
+    "creator": "Anbumathi chezhian",
+    "description": "HydroMind-X is a smart water intelligence and continuous-auditing platform for sustainable data centers. It fuses live IoT sensor readings — temperature, humidity, water level, water flow and reservoir status — with weather forecasts to compute a single, easy-to-read Water Availability Index (WAI) from 0 to 100. Adjust the sliders above to simulate any environmental scenario and watch the index and the AI recommendations update instantly. As water becomes scarce, HydroMind-X automatically selects a more conservative cooling strategy, prioritizes critical workloads such as hospitals and emergency services, delays flexible tasks like model training, and maximizes recycled water use — then captures the whole decision as a downloadable audit report.",
+    "category": "STEM/Scientific Research",
+    "stack": "Technology stack Frontend React Create React App Tailwind CSS Recharts and UI libraries Backend Python FastAPI MongoDB via Motor Pydantic",
+    "links": [],
+    "image": null,
+    "cover": "assets/projects/hydromind-x.webp"
+  },
+  {
+    "name": "KEEPIT",
+    "creator": "Amirah",
+    "description": "KEEPIT is a personal ownership assistant that helps people organize purchase records, save receipts, and track return deadlines and warranties so they never lose track of the things they own.",
+    "category": "App Development",
+    "stack": "Programming Languages: - TypeScript - JavaScript - HTML - CSS - SQL  Technologies & Frameworks: - React 18 - Vite - Tailwind CSS - Supabase - Lucide React",
+    "links": [],
+    "image": null,
+    "cover": "assets/projects/keepit.webp"
+  },
+  {
+    "name": "HireSense AI – AI-Powered Interview Preparation Platform",
+    "creator": "HireSense AI",
+    "description": "HireSense AI is an AI-powered interview preparation platform that helps job seekers improve their interview performance through real-time analysis of speaking pace, pauses, volume, head movement, and on-screen positioning. It combines these signals with AI-powered transcript evaluation to deliver personalized feedback, actionable improvement suggestions, and stronger versions of interview answers.",
+    "category": "Artificial Intelligence/Machine Learning",
+    "stack": "TypeScript, React 19, TanStack Start, Vite, Tailwind CSS, shadcn/ui, Web Audio API, MediaRecorder API, MediaPipe Tasks Vision (FaceLandmarker), Lovable Cloud, Supabase Edge Functions, Deno, Lovable AI Gateway, and Google Gemini 2.5 Flash.",
+    "links": [
+      {
+        "label": "Visit project",
+        "url": "https://hireesense.lovable.app"
+      },
+      {
+        "label": "View code",
+        "url": "https://github.com/Sumaya04122006/Hiresense-ai"
+      }
+    ],
+    "image": null,
+    "cover": "assets/projects/hiresense-ai-ai-powered-interview-preparation-platform.webp",
+    "audience": "People practicing for job interviews."
+  },
+  {
+    "name": "Layover",
+    "creator": "Amayl",
+    "description": "Layover is a Korean photo-booth-inspired web application that lets users create personalized Polaroid-style photo compositions with customizable layouts and stickers. Built with HTML, CSS, and JavaScript, it features interactive editing and option to download t their creations.",
+    "category": "Web Development",
+    "stack": "Html, css, and js",
+    "links": [
+      {
+        "label": "Visit project",
+        "url": "https://layoverweb.vercel.app"
+      },
+      {
+        "label": "View code",
+        "url": "https://github.com/Amayl97/Layover-Web-App.git"
+      }
+    ],
+    "image": "assets/projects/layover.webp",
+    "cover": "assets/projects/layover.webp",
+    "image_alt": "Screenshot of the Layover photo booth",
+    "audience": "People who want to turn their photos into customizable digital polaroids."
+  },
+  {
+    "name": "Customer churn prediction",
+    "creator": "salwa",
+    "description": "customer churn prediction using python and machine learning .",
+    "category": "Data Science",
+    "stack": "python jupyter notebook",
+    "links": [],
+    "image": null,
+    "cover": "assets/projects/customer-churn-prediction.webp"
+  },
+  {
+    "name": "Lingo",
+    "creator": "diyeah",
+    "description": "So you know how they say u only learn a language by speaking it out to a native person and there are so many apps for it. But what about sign language ? How do u know u r singing correctly? Hence Lingo was made , it teaches you sign language while ensuring u perform it correctly",
+    "category": "Artificial Intelligence/Machine Learning",
+    "stack": "Flutter, Dart, Riverpod, GoRouter, Hive, Google ML Kit (hand landmark detection), Lottie, and flutter_animate. We used Flutter's Clean Architecture to build a mobile ASL (American Sign Language) learning app.",
+    "links": [],
+    "image": null,
+    "cover": "assets/projects/lingo.webp"
+  },
+  {
+    "name": "Anjani Beesu – Personal Developer Portfolio",
+    "creator": "Anjani Beesu",
+    "description": "A personal portfolio website showcasing my software development projects, technical skills, and open-source contributions. It serves as a central platform for exploring my work in web development, AI, and cybersecurity.",
+    "category": "Web Development",
+    "stack": "Next.js, TypeScript, React, HTML, CSS, and Vercel.",
+    "links": [
+      {
+        "label": "Visit project",
+        "url": "https://portfolio-theta-olive-54.vercel.app/"
+      },
+      {
+        "label": "View code",
+        "url": "https://github.com/AnjaniBeesu/Portfolio"
+      }
+    ],
+    "image": null,
+    "cover": "assets/projects/anjani-beesu-personal-developer-portfolio.webp"
+  },
+  {
+    "name": "VelvetTrace — Digital Footprint & Privacy Lab",
+    "creator": "Genesis Naomí Luco Contreras",
+    "description": "VelvetTrace is a cute, privacy-focused web application that helps users visualize and better understand their digital footprint. It transforms voluntarily provided information about online accounts and privacy habits into an interactive map that highlights potential exposure patterns and provides personalized cybersecurity recommendations.",
+    "category": "Cybersecurity",
+    "stack": "Python, FastAPI, HTML, CSS, JavaScript, D3.js, NetworkX, SQLite, Figma, Visual Studio Code, Git, and GitHub. Python and FastAPI are used for the backend and privacy-risk analysis, while NetworkX models relationships between digital accounts and online behaviors as a graph. D3.js is used to create the interactive digital-footprint visualization, SQLite supports local data management, and HTML, CSS, and JavaScript build the web interface. Figma is used to design VelvetTrace’s minimalist pastel-pink visual identity, logo, interface components, and prototypes.",
+    "links": [],
+    "image": null,
+    "cover": "assets/projects/velvettrace-digital-footprint-privacy-lab.webp"
+  },
+  {
+    "name": "CodeLearner",
+    "creator": "Ruvaa",
+    "description": "CodeLearner is an AI-powered VS Code extension that helps programming beginners understand code, troubleshoot errors, generate explanatory comments, and explore practical examples through plain-English explanations and visual flowcharts. Built from my own experience transitioning from Food Science to Computer Science, it aims to make learning to code less intimidating by helping beginners understand not just what their code does, but how and why it works.",
+    "category": "Artificial Intelligence/Machine Learning",
+    "stack": "* TypeScript * Visual Studio Code Extension API * Large Language Models (LLMs) * Serverless proxy architecture * Git and GitHub * Visual Studio Code Marketplace * Open VSX",
+    "links": [],
+    "image": null,
+    "cover": "assets/projects/codelearner.webp"
+  },
+  {
+    "name": "Dear Diary",
+    "creator": "Kayla",
+    "description": "A diary style blog where I can post little updates of my life. Uses HTML, CSS, and JavaScript.",
+    "category": "Web Development",
+    "stack": "HTML, CSS, and JavaScript",
+    "links": [],
+    "image": null,
+    "cover": "assets/projects/dear-diary.webp"
+  },
+  {
+    "name": "Substack serious articles or notes about fashion, history, feminism , film cinematography, digital own magazines, volunteering in learning languages, but I am ready to write about any topic, i am the winner of Olympiad competition from geography to French",
+    "creator": "Maria",
+    "description": "Fashion deep analysis with history",
+    "category": "Fashion History Marketing",
+    "stack": "Basic",
+    "links": [],
+    "image": null,
+    "cover": "assets/projects/substack-serious-articles-or-notes-about-fashion-history-feminism-film-cinematography-digital-own-magazines-volunteering-in-learning-languages-but-i-am-ready-to-write-about-any-topic-i-am-the-winner-of-olympiad-competition-from-geography-to-french.webp"
+  },
+  {
+    "name": "ECHO",
+    "creator": "Saanvi Aditi",
+    "description": "ECHO is a student-led global learning platform empowering girls and underserved communities to explore technology, develop practical skills, and build real-world projects.  Through accessible courses, mentorship, AI-powered learning, and a global community, ECHO turns curiosity into confidence and ideas into opportunities.",
+    "category": "Web Development",
+    "stack": "MERN Stack(MongoDB, Express.js, React.js, Node.js)",
+    "links": [],
+    "image": null,
+    "cover": "assets/projects/echo.webp"
+  }
+]
