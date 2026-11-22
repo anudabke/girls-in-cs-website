@@ -11,7 +11,7 @@ Open `docs/index.html` in a browser for the local preview. The site uses static 
 
 ## Adding content
 
-- **Opportunities** live in `docs/assets/data/opportunities.json`. Match the existing fields and record the official source and verification date. Use an ISO deadline or `rolling` with an ISO `next_review`. Store an approved image in `docs/assets/opportunities/` and mark initials covers with `image_placeholder: true`. Use `null` for an unknown date and verify the official application window before adding it to the live catalog.
+- **Opportunities** live in `docs/assets/data/opportunities.json`. Match the existing fields and record the official source and verification date. Use an ISO deadline or `rolling` with an ISO `next_review`. Use a local image or a generated initials image stored as an image data URL. Mark initials covers with `image_placeholder: true`. Use `null` for an unknown date and verify the official application window before adding it to the live catalog.
 - **Interviews** need one folder under `docs/assets/interviews/` with slides named `1.webp`, `2.webp`, and so on. Add the folder name, display name, description, and slide count to `interviews.json`.
 - **Projects** live in `projects.json` in the same data directory. Add a public display name, description, category, stack, audience if supplied, authorized links, and a local cover. The optional `image` and `image_alt` fields display the actual screenshot or artwork in the dialog. Review consent before adding submissions.
 - Refresh the local double-click preview after data changes by running `python3 scripts/prune-opportunities.py`. On the hosted website, the JSON files are read directly.
@@ -28,121 +28,170 @@ On Home and Opportunities, the browser keeps dated entries through the end of th
 
 ## Monthly update
 
-1. Check official program pages for new application windows, early capacity closures, fees, eligibility, dates, and application links. Only add dated listings once their published cycle is open.
+1. Check official program pages for new application windows, early capacity closures, fees, eligibility, dates, and application links. Only add listings when the organizer has announced the current or next cycle. Record the opening date when applications will open later.
 2. Update `last_verified` for records you checked. Set a fresh `next_review` for confirmed rolling entries. Leave an unpublished numeric age blank when eligibility is based on school grade or access has no stated age cutoff.
-3. Add new listings in `docs/assets/data/opportunities.json` and use local initials covers. Put unverifiable fields at `null` or “Check site” and flag the record for review. Pages only include verified dated records in Due soon.
+3. Add new listings in `docs/assets/data/opportunities.json` and use local initials covers. Put unverifiable fields at `null` or “Check site” and flag the record for review. The homepage only includes verified dated records in Available Opportunities.
 4. Run `python3 scripts/prune-opportunities.py` to refresh local preview data. The nightly action removes expired dated records from the deployed copy and publishes Pages. Rolling records are hidden after their review date until refreshed.
 
 ## Opportunity inventory
 
-106 entries, including 41 dated opportunities. All covers are locally generated. Regional Science Bowl entries use the Department of Energy’s program-wide latest possible cutoff of three weeks before the posted event. Earlier regional deadlines and capacity limits can apply. Dated deadlines found for this release run from November 2026 through June 2027.
+Audit date: November 21, 2026. The previous inventory had 106 listings. The audit removed 73, retained 33, and added 100. The updated inventory has 133 listings.
 
-- [Naval Postgraduate School: Student Volunteer Program](https://nps.edu/web/stem/high-school) · 2026-11-24
-- [Naval Science and Engineering Apprenticeship Program](https://nps.edu/web/stem/high-school) · 2026-11-30
-- [Research Science Institute](https://www.cee.org/newsevents/press-releases/applications-being-accepted-2027-research-science-institute) · 2026-12-11
-- [Research Science Initiative India](https://www.cee.org/RSI_India) · 2026-12-14
-- [American Computer Science League](https://sites.google.com/acsl.org/active/Registration) · 2026-12-31
-- [Technovation Girls](https://technovationchallenge.org/get-started/) · 2027-03-11
-- [CS50x: Introduction to Computer Science](https://cs50.harvard.edu/technology/courses/) · rolling
-- [CS50: Programming with Python](https://cs50.harvard.edu/technology/courses/) · rolling
-- [CS50: Programming with Scratch](https://cs50.harvard.edu/technology/courses/) · rolling
-- [CS50: Databases with SQL](https://cs50.harvard.edu/technology/courses/) · rolling
-- [CS50: Web Programming with Python and JavaScript](https://cs50.harvard.edu/technology/courses/) · rolling
-- [CS50: Introduction to AI with Python](https://cs50.harvard.edu/technology/courses/) · rolling
-- [CS50: Introduction to Cybersecurity](https://cs50.harvard.edu/technology/courses/) · rolling
-- [CS50: Introduction to Programming with R](https://cs50.harvard.edu/technology/courses/) · rolling
-- [CS50: Understanding Technology](https://cs50.harvard.edu/technology/courses/) · rolling
-- [Code.org: Introduction to Game Lab](https://code.org/en-US/students/middle-and-high-school) · rolling
-- [Code.org: Turtle Programming in App Lab](https://code.org/en-US/students/middle-and-high-school) · rolling
-- [Code.org: Web Lab](https://code.org/en-US/students/middle-and-high-school) · rolling
-- [Code.org: Hour of AI](https://code.org/en-US/students/middle-and-high-school) · rolling
-- [Raspberry Pi Foundation: Intro to Scratch](https://projects.raspberrypi.org/en/pathways/scratch-intro) · rolling
-- [MDN: Learn Web Development](https://developer.mozilla.org/en-US/docs/Learn_web_development) · rolling
-- [The Odin Project: Foundations](https://www.theodinproject.com/paths/foundations/courses/foundations) · rolling
-- [Microsoft MakeCode for micro:bit](https://www.microbit.org/get-started/user-guide/microsoft-makecode/) · rolling
-- [University of Arizona KEYS Research Internship](https://keys.arizona.edu/information/future-students) · 2026-12-17
-- [GE-Reagan Foundation Scholarship](https://www.reaganfoundation.org/education/ge-reagan-foundation-scholarship) · 2027-01-07
-- [Creative Youth Awards](https://www.creativeyouthawards.org/submit) · 2026-12-08
-- [SCI Youth Grant Pitch Contest](https://socialcapitalinc.org/applications-open-2027-sci-youth-grant-pitch-contest/) · 2026-11-25
-- [Rockefeller Summer Science Research Program](https://www.rockefeller.edu/outreach/ssrp/faqs/) · 2027-01-04
-- [Rockefeller Jumpstart](https://www.rockefeller.edu/outreach/lab-jumpstart/) · 2027-01-04
-- [AMC 8](https://maa.org/amcreg/) · 2027-01-05
-- [Blue Planet Awareness Contest](https://bowseat.org/programs/blue-planet-awareness-contest/contest-overview/) · 2027-06-07
-- [NASA Dream with Us Engineering Challenge](https://www.nasa.gov/directorates/armd/dream-with-us-high-school-design-challenge/) · 2026-12-08
-- [Equitable Excellence Scholarship](https://scholarshipamerica.org/scholarship/equitableexcellence/) · 2026-12-22
-- [Amazon Future Engineer Scholarship](https://scholarshipamerica.org/scholarship/amazonfutureengineer/) · 2027-01-05
-- [Elks Legacy Awards](https://www.elks.org/scholars/scholarweb/legacy/rules.cfm) · 2027-02-01
-- [Coolidge Scholarship](https://coolidgescholars.org/selection-timeline/) · 2026-12-01
-- [Burger King Scholars](https://scholarshipamerica.org/scholarship/burger-king-scholars-program/) · 2026-12-15
-- [Carl C. Yount Charitable Scholarship](https://scholarshipamerica.org/scholarship/yount/) · 2027-01-20
-- [National Science Bowl: Nationwide High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/Nationwide-High-School-Regional-Science-Bowl) · 2027-02-06
-- [National Science Bowl: Nationwide Middle School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/Middle-School-Regionals/Nationwide-Middle-School-Regional-Science-Bowl) · 2027-01-23
-- [National Science Bowl: Sandia California High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/California/CA_Sandia-National-Laboratories-High-School-Regional-Science-Bowl) · 2027-01-02
-- [National Science Bowl: FarNorCal High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/California/CA_FarNorCal-High-School-Regional-Science-Bowl) · 2027-01-16
-- [National Science Bowl: California Central Valley High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/California/CA_California-Central-Valley-High-School-Regional-Science-Bowl) · 2027-02-06
-- [National Science Bowl: LADWP High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/California/CA_LADWP-High-School-Regional-Science-Bowl) · 2027-01-30
-- [National Science Bowl: South Florida High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/Florida/FL_South-Florida-High-School-Regional-Science-Bowl) · 2027-02-06
-- [National Science Bowl: Maricopa Institute of Technology High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/AZ_Maricopa-Institute-of-Technology-High-School-Regional-Science-Bowl) · 2027-01-16
-- [National Science Bowl: Arkansas High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/AR_Arkansas-High-School-Regional-Science-Bowl) · 2027-02-06
-- [National Science Bowl: Colorado High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/CO_Colorado-High-School-Regional-Science-Bowl) · 2027-01-30
-- [National Science Bowl: Connecticut High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/CT_Connecticut-High-School-Regional-Science-Bowl) · 2027-02-06
-- [National Science Bowl: Maryland/DC High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/MD_DC_Maryland-DC-Regional-High-School-Science-Bowl) · 2027-01-02
-- [National Science Bowl: Iowa High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/IA_Iowa-High-School-Regional-Science-Bowl) · 2027-02-13
-- [National Science Bowl: Savannah River High School Regional](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/SC_DOE-Savannah-River-Regional-Science-Bowl) · 2027-01-30
-- [National Science Bowl: Georgia High School Subregionals](https://science.osti.gov/wdts/nsb/Regional-Competitions/High-School-Regionals/Georgia/GA_Georgia-High-School-Regional-Science-Bowl) · 2027-01-16
-- [Toshiba/NSTA ExploraVision](https://www.exploravision.org/rules-requirements/) · 2027-01-27
-- [Writers & Books Teen Poetry Contest](https://writersandbooks.org/product/2027-teen-poetry-contest/) · 2026-12-01
-- [York Regional Police Youth Writing Contest](https://www.yrp.ca/explore/community-engagement-programs/2027-yrp-youth-writing-contest) · 2026-12-31
-- [Math Kangaroo USA](https://mathkangaroo.org/mks/resources/how-to-start-math-kangaroo-center/) · 2026-12-31
-- [Khan Academy: 6th Grade Math](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: 7th Grade Math](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: 8th Grade Math](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Pre-algebra](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Algebra I](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Geometry](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Algebra II](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Trigonometry](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Precalculus](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: High School Statistics](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Statistics and Probability](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP Calculus AB](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP Calculus BC](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP Statistics](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Multivariable Calculus](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Integrated Math I](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Integrated Math II](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Integrated Math III](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Middle School Biology](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Middle School Earth and Space Science](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Middle School Physics](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: High School Biology](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: High School Physics](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP Biology](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP Chemistry](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP Environmental Science](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP Physics 1](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: U.S. History](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP U.S. History](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: U.S. Government and Civics](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP U.S. Government and Politics](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP Macroeconomics](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP Microeconomics](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Computers and the Internet](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: AP Computer Science Principles](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: Grammar](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: 6th Grade Reading and Vocabulary](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: 7th Grade Reading and Vocabulary](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: 8th Grade Reading and Vocabulary](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: 9th Grade Reading and Vocabulary](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Khan Academy: 10th Grade Reading and Vocabulary](https://support.khanacademy.org/hc/en-us/articles/360014675332-Which-Khan-Academy-courses-have-Mastery-enabled) · rolling
-- [Raspberry Pi Foundation: Intro to Python](https://projects.raspberrypi.org/en/pathways/python-intro) · rolling
-- [Raspberry Pi Foundation: More Python](https://projects.raspberrypi.org/en/pathways/more-python) · rolling
-- [USACO Training Resources](https://usaco.org/index.php?page=training) · rolling
-- [Code.org Music Lab](https://code.org/en-US/tools) · rolling
-- [Code.org Python Lab](https://code.org/en-US/tools) · rolling
-- [micro:bit Make It: Code It](https://microbit.org/projects/make-it-code-it/) · rolling
-- [Microsoft MakeCode Arcade](https://arcade.makecode.com/) · rolling
-- [TSA TEAMS State Competition](https://tsaweb.org/teams/state-competition-2026) · 2027-01-08
+| Category | Before additions, after audit | Added | Total |
+| --- | ---: | ---: | ---: |
+| Summer programs and camps | 0 | 28 | 28 |
+| Research and internships | 6 | 24 | 30 |
+| Scholarships | 4 | 18 | 22 |
+| Competitions | 23 | 25 | 48 |
+| Essay competitions | 0 | 5 | 5 |
+
+The inventory has 130 dated listings and 3 rolling listings. 97 of the new listings have dated deadlines. Published standard or late cutoffs include May, June, July, August, and October 2027. No new September or November 2027 cutoff was confirmed. Check listings with multiple rounds for regular pricing and earlier qualifying deadlines. Some announced 2027 applications open later.
+
+New cover images are generated initials in the existing palette, stored as image data in the listing. Older covers use local image files. Regional Science Bowl listings inherited from the previous inventory use the Department of Energy’s latest possible cutoff, three weeks before the posted event. Check each regional page for earlier limits.
+
+### Removed during the audit
+
+- **Naval Postgraduate School: Student Volunteer Program**. Unpaid student volunteering program.
+- **GE-Reagan Foundation Scholarship**. Award is centered on general leadership and community service.
+- **Creative Youth Awards**. General arts and creative-writing award without a required STEAM focus.
+- **SCI Youth Grant Pitch Contest**. Community service and civic project pitch.
+- **Equitable Excellence Scholarship**. Award is centered on community leadership and impact.
+- **Coolidge Scholarship**. Public policy and civics are central selection criteria.
+- **Writers & Books Teen Poetry Contest**. Poetry contest without a STEAM focus.
+- **York Regional Police Youth Writing Contest**. Fiction and poetry contest without a STEAM focus.
+
+These courses, curricula, and practice tools had open access without a competitive application or entry.
+
+- CS50x: Introduction to Computer Science
+- CS50: Programming with Python
+- CS50: Programming with Scratch
+- CS50: Databases with SQL
+- CS50: Web Programming with Python and JavaScript
+- CS50: Introduction to AI with Python
+- CS50: Introduction to Cybersecurity
+- CS50: Introduction to Programming with R
+- CS50: Understanding Technology
+- Code.org: Introduction to Game Lab
+- Code.org: Turtle Programming in App Lab
+- Code.org: Web Lab
+- Code.org: Hour of AI
+- Raspberry Pi Foundation: Intro to Scratch
+- MDN: Learn Web Development
+- The Odin Project: Foundations
+- Microsoft MakeCode for micro:bit
+- Khan Academy: 6th Grade Math
+- Khan Academy: 7th Grade Math
+- Khan Academy: 8th Grade Math
+- Khan Academy: Pre-algebra
+- Khan Academy: Algebra I
+- Khan Academy: Geometry
+- Khan Academy: Algebra II
+- Khan Academy: Trigonometry
+- Khan Academy: Precalculus
+- Khan Academy: High School Statistics
+- Khan Academy: Statistics and Probability
+- Khan Academy: AP Calculus AB
+- Khan Academy: AP Calculus BC
+- Khan Academy: AP Statistics
+- Khan Academy: Multivariable Calculus
+- Khan Academy: Integrated Math I
+- Khan Academy: Integrated Math II
+- Khan Academy: Integrated Math III
+- Khan Academy: Middle School Biology
+- Khan Academy: Middle School Earth and Space Science
+- Khan Academy: Middle School Physics
+- Khan Academy: High School Biology
+- Khan Academy: High School Physics
+- Khan Academy: AP Biology
+- Khan Academy: AP Chemistry
+- Khan Academy: AP Environmental Science
+- Khan Academy: AP Physics 1
+- Khan Academy: U.S. History
+- Khan Academy: AP U.S. History
+- Khan Academy: U.S. Government and Civics
+- Khan Academy: AP U.S. Government and Politics
+- Khan Academy: AP Macroeconomics
+- Khan Academy: AP Microeconomics
+- Khan Academy: Computers and the Internet
+- Khan Academy: AP Computer Science Principles
+- Khan Academy: Grammar
+- Khan Academy: 6th Grade Reading and Vocabulary
+- Khan Academy: 7th Grade Reading and Vocabulary
+- Khan Academy: 8th Grade Reading and Vocabulary
+- Khan Academy: 9th Grade Reading and Vocabulary
+- Khan Academy: 10th Grade Reading and Vocabulary
+- Raspberry Pi Foundation: Intro to Python
+- Raspberry Pi Foundation: More Python
+- USACO Training Resources
+- Code.org Music Lab
+- Code.org Python Lab
+- micro:bit Make It: Code It
+- Microsoft MakeCode Arcade
+
+### Listings with details to confirm
+
+Each listing below has an official cycle source and a published deadline or rolling window. Confirm missing details such as the amount, timing, eligibility, or location with the organizer.
+
+- [Barcelona International Youth Science Challenge](https://biysc.org/the-application/)
+- [Boston University Research in Science & Engineering](https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/how-to-apply/)
+- [Cal Poly Engineering Possibilities in College](https://epic.calpoly.edu/epic-summer-2027)
+- [Central New Mexico STEM Research Challenge](https://hsc.unm.edu/stem-h/2027-research-challenge-project-materials-guidelines.pdf)
+- [Columbia Engineering the Next Generation](https://outreach.engineering.columbia.edu/eng)
+- [Columbia Summer High School Academic Program for Engineers](https://outreach.engineering.columbia.edu/shape/apply)
+- [Denver Museum of Nature & Science Teen Science Scholars](https://www.dmns.org/about/teen-science-scholars)
+- [Emory NextGen High School Internship](https://med.emory.edu/departments/human-genetics/next-gen.html)
+- [Florida International University Summer Research Internship](https://case.fiu.edu/opportunities/internships-jobs/summer-research-internship/)
+- [Foundation for Geauga Parks Ginn Scholarship](https://www.foundationforgeaugaparks.org/ginn-scholarship)
+- [Fred Hutch Summer High School Internship Program](https://www.fredhutch.org/en/education-training/high-school-students/summer-high-school-internship-program.html)
+- [GameSalad Video Game Creation Challenge](https://gamesalad.com/education/student-challenge/2027-rules/)
+- [Heithoff-Brody High School Summer Scholars](https://www.salk.edu/about/education-outreach/programs/high-school-scholars/faq/)
+- [Indiana University Future Scientist Program](https://cancer.iu.edu/education/summer/future-scientist.html)
+- [Janelia Loudoun County Summer Internship](https://www.janelia.org/you-janelia/students-and-postdocs-0)
+- [Kroto Prize for Innovative Use of Technology in Learning](https://sheffield.ac.uk/kroto/kroto-outreach/prize-innovative-use-technology-learning-2026)
+- [Louisville Regional Science & Engineering Fair](https://lrsef.org/for-students/)
+- [LSU High School Summer Research Internship](https://lsu.edu/eng/future/summer-camps/hssrprogram.php)
+- [Maine School of Science and Mathematics High School STEM Research Program](https://www.mssm.org/summer/summer-stem-2027/high-school-stem-research-program)
+- [Massachusetts Region II High School Science & Engineering Fair](https://www.wrsef.net/high-school-fair)
+- [MD Anderson High School Summer Program](https://www.mdanderson.org/education-training/research-training/early-career-pathway-programs/summer-research-programs/programs/high-school-summer-program.html)
+- [NASA Glenn High School Engineering Institute](https://www.nasa.gov/wp-content/uploads/2026/09/ps-05046-hsengineering-flyer27-508.pdf?emrc=190cd4)
+- [NSHSS STEAM Scholarship](https://www.nshss.org/scholarships/s/nshss-steam-scholarship/)
+- [OceanICU Youth Competition](https://ocean-icu.eu/wp-content/uploads/2026/09/OceanICUCompetitionToR_final.pdf)
+- [OriGen Biomedical STEM Scholarship](https://www.origen.com/origen-biomedical-stem-scholarship)
+- [Purdue Seminar for Top Engineering Prospects](https://engineering.purdue.edu/Honors/SeminarforTopEngineeringProspects)
+- [Rose-Hulman Operation Catapult](https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/index.html)
+- [Roswell Park Summer Research Experience in Cancer](https://www.roswellpark.org/education/high-school-undergrad/high-school-summer-research-program)
+- [Science Ambassador Scholarship](https://www.scienceambassadorscholarship.org/)
+- [Scripps Translational Institute Student Research Internship](https://www.scripps.edu/science/translational-institute/education-training/student-research-internship-program/)
+- [Silicon Valley Engineering Council High School STEM Education Award](https://svec.org/high-school-stem-grant-awards/)
+- [Space Foundation National Space Sustainability Competition](https://www.spacefoundation.org/national-space-day-competition/)
+- [Stanford CARE Explorers AI x Precision Health](https://asianhealth.stanford.edu/education/stanford-care-explorers-ai-x-precision-health-high-school-program)
+- [SWE Santa Clara Valley Incoming Freshman Scholarship](https://www.scvswe.org/scholarship-application)
+- [Synopsys Championship Science and Engineering Fair](https://science-fair.org/students-parents/important-dates/)
+- [Tufts Engineering Design Lab](https://universitycollege.tufts.edu/pre-college/browse/engineering-design-lab)
+- [Tufts Engineering with Artificial Intelligence](https://universitycollege.tufts.edu/pre-college/browse/engineering-artificial-intelligence)
+- [UConn SPARK Summer Program](https://vergnano.institute.uconn.edu/programs-opportunities/k-12-programs/spark-summer-program/)
+- [University of Colorado STEM Research Experience](https://www.colorado.edu/sciencediscovery/programs/stem-research-experience)
+- [UNMC Summer High School Advanced Research Program](https://www.unmc.edu/student-success/pathway-programs/sharp/index.html)
+- [Wolfram High School Summer Research Program](https://www.wolframcloud.com/obj/summercamp/WSRP/2027/Application)
+- [WTS Central Pennsylvania Colleen Brown Scholarship](https://www.wtsinternational.org/chapters/central-pennsylvania/scholarships)
+- [Yale Review of International Studies Essay Prize](https://highschoolessaycomp.org/)
+
+### Considered and left out
+
+- **Canada/USA Mathcamp**. The organizer had not posted a 2027 application deadline.
+- **Missouri S&T Summer Program for Aspiring Researchers and Creators**. Two program end dates were shown and the current application cutoff could not be confirmed.
+- **NIST Summer High School Internship Program**. The 2027 posting classifies the position as student volunteering.
+- **Notre Dame Introduction to Engineering**. The current cycle is announced, but the published cost still refers to 2026 and a firm cutoff could not be confirmed.
+- **PROMYS**. The 2027 cycle was announced, but the application page still displayed the 2026 deadline.
+- **Regeneron High School Mentorship Program**. The 2027 teacher nomination cutoff had already passed for new applicants.
+- **Regeneron Science Talent Search**. The 2027 cycle closed on November 5, 2026. A later cycle was not confirmed.
+- **SWE Houston Area Incoming Freshman Scholarships**. The public chapter page did not give a firm current-cycle closing date.
+- **Stanford Compression Forum SHTEM Internship**. Closing date and price are tentative.
+- **Stanford Institutes of Medicine Summer Research Program**. The organizer gave a closing month without a firm day.
+- **Texas A&M Camp SOAR**. The current cycle is announced, but the organizer page gave an opening date without a firm closing date.
+- **U.S. Naval Academy Summer STEM**. The 2027 sessions and opening date were listed, but a current-cycle deadline or rolling intake was not confirmed.
+- **UC Berkeley embARC**. The page listed 2027 program dates and 2026 admissions cutoffs and fees.
+- **WTS Tampa Bay Scholarships**. The current application window closed November 1, 2026.
 
 ## Showcase artwork
 
