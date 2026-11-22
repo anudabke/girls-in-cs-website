@@ -67,9 +67,19 @@ const motionObserver = new IntersectionObserver(entries => {
     motionObserver.unobserve(node);
   }
 }, { threshold: .12 });
-for (const node of $$('[data-count], main .section > h2, main .section-head')) {
+for (const node of $$('[data-count]:not(.stats [data-count]), main .section > h2, main .section-head')) {
   if (!node.hasAttribute('data-count') && !reduceMotion.matches) node.classList.add('reveal');
   motionObserver.observe(node);
+}
+
+const homepageStats = $$('.stats [data-count]');
+if (homepageStats.length && !reduceMotion.matches) {
+  const observeStatsAfterScroll = () => {
+    if (window.scrollY <= 0) return;
+    window.removeEventListener('scroll', observeStatsAfterScroll);
+    for (const stat of homepageStats) motionObserver.observe(stat);
+  };
+  window.addEventListener('scroll', observeStatsAfterScroll, { passive: true });
 }
 
 if (!reduceMotion.matches) {
