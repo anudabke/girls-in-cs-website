@@ -35,19 +35,77 @@ On Home and Opportunities, the browser keeps dated entries through the end of th
 
 ## Opportunity inventory
 
-Audit date: November 21, 2026. The previous inventory had 106 listings. The audit removed 73, retained 33, and added 100. The updated inventory has 133 listings.
+Audit date: November 21, 2026. The previous inventory had 106 listings. The audit removed 73, retained 33, and added 100. That audit brought the inventory to 133 listings. The scholarship and award expansion added another 100, for 233 total.
 
-| Category | Before additions, after audit | Added | Total |
+| Category | After audit | Added in this expansion | Total |
 | --- | ---: | ---: | ---: |
-| Summer programs and camps | 0 | 28 | 28 |
-| Research and internships | 6 | 24 | 30 |
-| Scholarships | 4 | 18 | 22 |
-| Competitions | 23 | 25 | 48 |
-| Essay competitions | 0 | 5 | 5 |
+| Summer programs and camps | 28 | 0 | 28 |
+| Research and internships | 30 | 0 | 30 |
+| Scholarships | 22 | 67 | 89 |
+| Competitions | 48 | 0 | 48 |
+| Essay competitions | 5 | 0 | 5 |
+| Awards | 0 | 33 | 33 |
 
-The inventory has 130 dated listings and 3 rolling listings. 97 of the new listings have dated deadlines. Published standard or late cutoffs include May, June, July, August, and October 2027. No new September or November 2027 cutoff was confirmed. Check listings with multiple rounds for regular pricing and earlier qualifying deadlines. Some announced 2027 applications open later.
+The inventory has 230 dated listings and 3 rolling listings. All 100 entries in the scholarship and award expansion have a dated cutoff from the organizer. Published standard or late cutoffs include May, June, July, August, and October 2027. No new September or November 2027 cutoff was confirmed. Check listings with multiple rounds for regular pricing and earlier qualifying deadlines. Some announced 2027 applications open later.
 
 New cover images are generated initials in the existing palette, stored as image data in the listing. Older covers use local image files. Regional Science Bowl listings inherited from the previous inventory use the Department of Energy’s latest possible cutoff, three weeks before the posted event. Check each regional page for earlier limits.
+
+### Scholarship and award listings with details to confirm
+
+The organizer has published a deadline for each of these listings. Check the linked source for the field or fields marked “Check site” in the catalog.
+
+- [SAME Phoenix Post STEM Scholarship](https://www.same.org/phoenix/scholarships/)
+- [SAME Northern Virginia Post Scholarship](https://www.same.org/nova/about/scholarship/)
+- [Montana STEM and Healthcare Scholarship](https://mus.edu/Prepare/Pay/Scholarships/STEM_Scholarship.html)
+- [Georgia Foundation for Agriculture High School Scholarship](https://www.gafoundationag.org/scholarships)
+- [Missouri State Fair Youth in Agriculture Scholarship](https://www.mostatefair.com/state-fair-news/msf-youth-in-agriculture-scholarship-deadline-january-15/)
+- [National FFA Scholarship Program](https://www.ffa.org/participate/grants-and-scholarships/scholarships/)
+- [Howard University Karsh STEM Scholars Program](https://karshstemscholars.howard.edu/applicant-roadmap)
+- [Carroll University Davies Otto Fellow Science Scholarship](https://www.carrollu.edu/financial-aid/undergraduate-scholarships-first-year-students/davies-otto/)
+- [Saint Joseph’s McNulty Scholars Program](https://www.sju.edu/mcnulty-scholars/apply)
+- [New Hampshire Charitable Foundation Four-Year Scholarship](https://www.nhcf.org/wp-content/uploads/2026/11/nhcf-scholarships-available-2027-2028-v4.pdf)
+- [CodeYourSelf Creative Coding Awards](https://www.code-art.com/codeyourself/)
+- [Steven H. Strogatz Prize for Math Communication](https://momath.org/strogatzprize/)
+- [ISTE AI Innovator Student Challenge](https://iste-ascd.org/ai-innovator)
+- [Stevens High School Entrepreneurship and AI Video Pitch](https://www.stevens.edu/page-basic/high-school-entrepreneurship-and-artificial-intelligence-ai-video-pitch)
+- [UC Davis Teen Biotech Challenge](https://biotech.ucdavis.edu/teen-biotech-challenge)
+- [Jacobs Teen Innovation Challenge](https://www.pactful.org/jtic27/)
+- [CAST-SF Youth Innovation Competition](https://castsf.org/youth-innovation-competition.html)
+- [MathWorks Math Modeling Challenge](https://m3challenge.siam.org/newsroom/mathworks-math-modeling-challenge-registration-opens-for-2027/)
+- [Hong Kong Student Science Project Competition](https://hksspc.hkfyg.org.hk/en/competition_details/)
+- [Penn State Incoming Engineering Scholarships](https://www.engr.psu.edu/undergraduate/scholarships-aid/incoming-first-year-student-scholarships.aspx)
+- [Mizzou First-Year Engineering Scholarships](https://engineering.missouri.edu/admissions/scholarships/first-year-students/)
+- [Wilkes Soil and Water Conservation Scholarship](https://www.wilkesswcd.org/scholarship)
+- [Boone County Hospital Foundation Scholarships](https://www.boonehospital.com/foundation/scholarships)
+- [Foundation for Applied Technical Education Scholarships](https://fatefacts.org/scholarships/)
+- [Blue Grass Community Foundation Scholarships](https://www.bgcf.org/scholarships/)
+- [Collaboratory Southwest Florida Scholarships](https://apply.mykaleidoscope.com/program/Collaboratory2027ScholarshipApplication)
+- [Georgia Foundation for Agriculture Technical College Scholarship](https://www.gafoundationag.org/scholarships#:~:text=Technical%20College%20Scholarship)
+- [FIRST Robotics Competition Impact Award](https://www.firstinspires.org/resources/library/frc/submitted-awards#:~:text=FIRST%20Impact%20Award)
+- [FIRST Robotics Competition Leadership Award](https://www.firstinspires.org/resources/library/frc/submitted-awards)
+- [ACAMIS Science Competition at ISD](https://www.acamis.org/science-competition-isd-2027)
+- [Silicon Valley International Invention Festival Youth Awards](https://ifia.com/sviif-2027/)
+- [Solano County Science and Engineering Fair Competitive Pathway](https://www.solanocoe.net/Educational-Services/Curriculum--Instruction/STEAM/Science--Engineering-Fair-SCSEF/index.html)
+- [San Mateo County STEM Fair](https://stemfair.net/students/)
+- [Massachusetts Region IV High School Science and Engineering Fair](https://sites.google.com/site/regionivscifair/how-to-enter)
+- [Agtegra Agricultural Scholarship](https://www.agtegra.com/who-is-agtegra/news-events/agtegra-news/apply-for-the-2027-agtegra-agricultural-scholarshi)
+- [TOPDON Techs of Tomorrow Scholarship](https://www.topdon.us/pages/techs-of-tomorrow-scholarship)
+- [Fillmore Soil and Water Conservation District High School Scholarship](https://www.fillmoreswcd.org/wp-content/uploads/2026/10/SWCD-High-Scholarship-Application.pdf)
+- [Cleveland State Washkewicz Scholars Program](https://engineering.csuohio.edu/scholarships/first-year-student-scholarships)
+- [Indian River County Scholarship Foundation Award](https://www.sfindianriver.org/apply-for-award/how-to-apply/)
+- [New Haven Schools Foundation Scholarships](https://nhsfoundation.org/scholarships/scholarship-program/)
+- [Money Fit National Scholarship](https://www.moneyfit.org/scholarship/)
+- [PPEF Scholarships for Incoming College Students](https://apply.mykaleidoscope.com/program/PPEFGeneral2027)
+- [Calgary Youth Science Fair](https://www.cysf.org/registration/)
+- [Arlington Math Science and Technology Fair](https://www.mstfair.com/links)
+- [SAGE UK Innovate4Impact Challenge](https://sageuk.org/innovate4impact)
+- [University of Utah High School Entrepreneur Challenge](https://lassonde.utah.edu/hsuec/guide/)
+- [eCYBERMISSION STEM Competition Awards](https://www.ecybermission.com/ImportantDates)
+- [Yale Engineers Without Borders Science and Engineering Competition](https://pages.algoed.co/yale-ewb/science-engineering-competition)
+- [FIRST Digital Animation Award](https://www.firstinspires.org/programs/calendar?view=calendar%23wfa-closes)
+- [Texas Farm Bureau Young Farmer and Rancher High School Scholarship](https://texasfarmbureau.org/wp-content/uploads/2026/11/FINAL_Scholarship-Opportunities-and-Online-Application-Instructions-Document27.pdf)
+- [Ohio Agricultural Council Scholarship](https://ohioagcouncil.org/wp-content/uploads/2026/11/2027-Scholarship-Application.pdf)
+- [Peninsula College Fund Scholarship](https://www.peninsulacollegefund.org/students/become-a-scholar/)
 
 ### Removed during the audit
 
