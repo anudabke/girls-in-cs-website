@@ -6,6 +6,45 @@ const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const escapeHtml = (value = '') => String(value ?? '').replace(/[&<>"']/g, character =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 
+// Keep old bookmarks and local previews compatible with the public routes.
+const pageRoutes = new Set(['/', '/about', '/opportunities', '/showcase', '/interviews',
+                            '/events', '/join', '/privacy', '/terms']);
+const localPreview = location.protocol === 'file:';
+const githubBase = location.hostname.endsWith('.github.io') &&
+  location.pathname.startsWith('/girls-in-cs-website/') ? '/girls-in-cs-website' : '';
+
+function cleanPagePath(path) {
+  return path === '/index.html' ? '/' : path.replace(/\.html$/, '');
+}
+
+function setPageUrls() {
+  if (localPreview || githubBase) {
+    for (const link of $$('a[href^="/"]')) {
+      const href = link.getAttribute('href');
+      const path = href.split(/[?#]/, 1)[0];
+      if (!pageRoutes.has(path)) continue;
+      const target = localPreview
+        ? (path === '/' ? 'index' : path.slice(1)) + '.html'
+        : githubBase + path;
+      link.setAttribute('href', target + href.slice(path.length));
+    }
+  }
+
+  if (!['http:', 'https:'].includes(location.protocol)) return;
+  if (document.body.dataset.page === '404') {
+    // The 404 base URL points to the site root. Keep the skip link on this page.
+    $('.skip').setAttribute('href', location.pathname + location.search + '#main');
+    return;
+  }
+
+  const path = location.pathname.slice(githubBase.length);
+  const clean = cleanPagePath(path);
+  if (path !== clean && pageRoutes.has(clean)) {
+    history.replaceState(history.state, '', githubBase + clean + location.search + location.hash);
+  }
+}
+setPageUrls();
+
 // Set a public Behold JSON feed URL to use live posts.
 const INSTAGRAM_FEED_URL = "";
 

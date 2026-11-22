@@ -4,6 +4,8 @@ Open `docs/index.html` in a browser for the local preview. The site uses static 
 
 ## GitHub Pages
 
+Public links use root-relative paths such as `/showcase` and `/join#mentorship`. GitHub Pages serves these paths from the existing page files. Older links with the filename still work, and the local file preview restores filename links in the browser.
+
 1. Open or create the public `girls-in-cs-website` GitHub repository. Copy the contents of this folder into its root, including the hidden `.github` directory. Keep `docs`, `scripts`, and `.github` at the top level.
 2. Under **Settings → Pages → Build and deployment → Source**, choose **GitHub Actions**. Push to `main` or open **Actions → Maintain opportunities and publish Pages → Run workflow**.
 3. Check the site from the Pages URL. Test all three Google Forms while signed out. Confirm Formspree targets `girlsincsorg@gmail.com`, then test first-name validation, feedback delivery, and Reply-To from the hosted page.
