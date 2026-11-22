@@ -38,8 +38,12 @@ const detail = $('#detail');
 const detailContent = $('#detail-content');
 function readData(name) {
   if (location.protocol === 'file:') return Promise.resolve(window.GirlsInCSData[name]);
-  const assetRoot = new URL('.', document.currentScript?.src || $('script[src$="/site.js"]').src);
-  return fetch(new URL('data/' + name + '.json', assetRoot)).then(response => {
+  const script = new URL((document.currentScript || $('script[src$="/site.js"], script[src*="/site.js?"]')).src);
+  const url = new URL('data/' + name + '.json', script);
+  const revision = script.searchParams.get('revision');
+  if (name === 'opportunities' && revision) url.searchParams.set('revision', revision);
+  const options = name === 'opportunities' ? { cache: 'no-cache' } : undefined;
+  return fetch(url, options).then(response => {
     if (!response.ok) throw new Error('Unable to read ' + name);
     return response.json();
   });
